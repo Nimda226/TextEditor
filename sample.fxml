@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #90EE90;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditorController">
+
+   <top>
+      <MenuBar style="-fx-background-color: #90EE90;" BorderPane.alignment="CENTER">
+          <Menu text="Файл">
+              <MenuItem onAction="#onNewFile" text="Новый файл" />
+              <MenuItem onAction="#onLoad" text="Открыть из ..." />
+             <!-- <MenuItem  text="Сохранить" onAction="#onSave" /> -->
+              <MenuItem onAction="#onSaveIn" text="Сохранить в ..." />
+              <MenuItem onAction="#onClose" text="Выход" />
+          </Menu>
+
+          <Menu text="Помощь">
+              <MenuItem onAction="#onAbout" text="Информация" />
+          </Menu>
+      </MenuBar>
+   </top>
+
+   <bottom>
+      <HBox prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: #90EE90;" BorderPane.alignment="CENTER" />
+   </bottom>
+
+   <center>
+      <TextArea fx:id="areaText" prefHeight="370.0" prefWidth="600.0" style="-fx-background-color: #90EE90;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
